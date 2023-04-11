@@ -1,7 +1,10 @@
-import React from "react";
+import { NextPage } from 'next';
+import React from 'react';
+import useUser from 'lib/client/useUser';
 
-export default () => (
-  <div>
-    <h1>Hello</h1>
-  </div>
-);
+const Home: NextPage = () => {
+  const user = useUser();
+  console.log('user', user);
+  return <div>hi</div>;
+};
+export default Home;
