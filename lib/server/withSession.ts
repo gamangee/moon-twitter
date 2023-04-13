@@ -9,10 +9,15 @@ declare module 'iron-session' {
 }
 
 const cookieOptions = {
-  cookieName: 'carrotsession',
-  password: process.env.COOKIE_PASSWORD!,
+  cookieName: 'twitterSession',
+  password: '8PAg0kA8hV1TFxjKGD9rwqFTTGgszDDCd3QnLdLs',
 };
 
 export function withApiSession(fn: any) {
   return withIronSessionApiRoute(fn, cookieOptions);
+}
+
+export interface ResponseType {
+  ok: boolean;
+  [key: string]: any;
 }
